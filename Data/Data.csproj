@@ -68,7 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cloud\CloudRepostory.cs" />
+    <Compile Include="Cloud\CloudRepository.cs" />
     <Compile Include="Desktop\DesktopRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpringFiles\SpringAopConfig.cs" />

@@ -22,7 +22,7 @@ namespace Data.SpringFiles
 
             if (isInCloud)
             {
-                return new CloudRepostory<Person>(_context.GetObject<ILog>());
+                return new CloudRepository<Person>(_context.GetObject<ILog>());
             }
 
             return new DesktopRepository<Person>(_context.GetObject<ILog>());

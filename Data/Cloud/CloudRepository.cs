@@ -5,11 +5,11 @@ using log4net;
 
 namespace Data.Cloud
 {
-    public class CloudRepostory<T> : IRepository<T>
+    public class CloudRepository<T> : IRepository<T>
     {
         private readonly ILog _log;
 
-        public CloudRepostory(ILog log)
+        public CloudRepository(ILog log)
         {
             _log = log;
         }
