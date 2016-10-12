@@ -2,6 +2,8 @@
 using Data.Desktop;
 using Domain;
 using Interfaces;
+using Interfaces.Data;
+using Interfaces.Shared;
 using log4net;
 using Spring.Context;
 using Spring.Context.Attributes;

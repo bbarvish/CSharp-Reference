@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Interfaces;
+using Interfaces.Data;
 using log4net;
 
 namespace Data.Cloud

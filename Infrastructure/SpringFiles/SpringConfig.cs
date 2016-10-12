@@ -3,6 +3,7 @@ using Microsoft.Azure;
 using Spring.Context;
 using Spring.Context.Attributes;
 using Interfaces;
+using Interfaces.Shared;
 using Spring.Aspects.Logging;
 using ILog = log4net.ILog;
 

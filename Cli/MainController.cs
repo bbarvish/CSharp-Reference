@@ -1,6 +1,8 @@
 ﻿using System;
 using Domain;
 using Interfaces;
+using Interfaces.Data;
+using Interfaces.Shared;
 using log4net;
 
 namespace Cli

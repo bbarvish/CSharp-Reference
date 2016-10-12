@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Interfaces;
+using Interfaces.Shared;
 using log4net;
 
 namespace Infrastructure

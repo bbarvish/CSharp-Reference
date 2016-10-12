@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
-namespace Interfaces
+namespace Interfaces.Data
 {
     public interface IRepository<T>
     {

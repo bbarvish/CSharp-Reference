@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace Interfaces.Shared
 {
     public interface IAppContext
     {
