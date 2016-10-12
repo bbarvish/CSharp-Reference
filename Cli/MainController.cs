@@ -36,7 +36,16 @@ namespace Cli
             {
                 Console.WriteLine("Press q to quit");
                 userResponse = Console.ReadLine();
-                ProcessUserResponse(userResponse);
+
+                try
+                {
+                    ProcessUserResponse(userResponse);
+                    Console.WriteLine($"Completed user request for operation: {userResponse}");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($" Unable to complete request for operation {userResponse}  with error: {e.Message}");
+                }
             }
         }
 

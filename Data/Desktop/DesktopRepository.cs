@@ -8,6 +8,7 @@ namespace Data.Desktop
     public class DesktopRepository<T> : IRepository<T> where T:new()
     {
         private readonly ILog _log;
+        private int _retryCount = 0;
 
         public DesktopRepository(ILog log)
         {
@@ -18,15 +19,16 @@ namespace Data.Desktop
         {
             var currentTicks = Environment.TickCount;
 
-            _log.Info($"Attempting DesktopRepository Get at: {currentTicks}");
+            _log.Info($"Attempting DesktopRepository Get at: {currentTicks} with retry count of: {_retryCount}");
 
             if (currentTicks % 2 == 0)
             {
                 _log.Error("Even tick in DesktopRepository so fail for retry purposes");
-                throw new ApplicationException("Sorry, that was an even tick");
+                throw new ApplicationException($"Sorry, that was an even tick at retry {++_retryCount}");
             }
 
-            _log.Info($"Completing DesktopRepository Get at: {currentTicks}");
+            _log.Info($"Completing DesktopRepository Get at: {currentTicks} with retry count: {_retryCount}");
+            _retryCount = 0;
 
             return new T();
         }
