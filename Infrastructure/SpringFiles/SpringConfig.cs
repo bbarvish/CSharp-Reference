@@ -5,6 +5,7 @@ using Spring.Context.Attributes;
 using Interfaces;
 using Interfaces.Shared;
 using Spring.Aspects.Logging;
+using TinyMessenger;
 using ILog = log4net.ILog;
 
 namespace Infrastructure.SpringFiles
@@ -31,18 +32,11 @@ namespace Infrastructure.SpringFiles
                 LogLevel = LogLevel.Info
             };
         }
-        //        <object name = "loggingAdvice" type="Spring.Aspects.Logging.SimpleLoggingAdvice, Spring.Aop">
-        //  <property name = "LogUniqueIdentifier" value="true"/>               
-        //  <property name = "LogExecutionTime"    value="true"/>               
-        //  <property name = "LogMethodArguments"  value="true"/>
-        //  <property name = "LogReturnValue"      value="true"/>
 
-        //  <property name = "Separator"           value=";"/>
-        //  <property name = "LogLevel"            value="Info"/>
-
-
-        //  <property name = "HideProxyTypeNames"  value="true"/>
-        //  <property name = "UseDynamicLogger"    value="true"/>
-        //</object>
+        [ObjectDef]
+        public virtual ITinyMessengerHub TinyMessengerHub()
+        {
+            return new TinyMessengerHub();
+        }
     }
 };

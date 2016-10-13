@@ -19,5 +19,10 @@ The project stucture is pretty close to the [Onion Architecture](http://jeffreyp
 This is simply intended to provide the entry point to the application domain.  I can be a desktop app, a web app or a command line interface (cli) designed to run in the background or a windows service.  You can also easily convert the CLI to a WindowsService using [TopShelf](http://topshelf-project.com/).
 
 For this solution the Cli simply presents the user with a menu and allows them to trigger different examples of behavior.
+### Domain
+This project has no references to any other projects in the soution and simply contains the classes which form the domain that the target solution operates on.  Very little emphasis is placed on this project as it is in the very middle of the onion.
+
 ### Interfaces
 Following the Inteface Segregation principle all intefaces that are shared by the member  projects are placed into this project.  Eventhough tools like resharper offer a very convenient to find code in a solution I prefer to have folders inside this project that mimic the solution layout making things easier to find on the file system.  The interface project directly references the domain project as some interfaces will likely accept or return a class from the domain.
+### Infrastructure
+As the name implies this project provides infrastructure and is referenced and used by other projects which form the application business operations.  This is an excellent place to put your event aggregator [Tiny Messenger](https://github.com/grumpydev/TinyMessenger/wiki) and other objects such as an AppContext that are likely shared across many projects.  I also find myself placing extension classes here for the same reason.
