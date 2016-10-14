@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain;
-using Interfaces;
+﻿using Domain;
 using Interfaces.Data;
 using Interfaces.Shared;
 using log4net;
@@ -15,6 +9,7 @@ namespace Cli.SpringFiles
 {
     [Configuration]
     [Import(typeof(Infrastructure.SpringFiles.SpringConfig))]
+    [Import(typeof(Services.SpringFiles.SpringConfig))]
     [Import(typeof(Data.SpringFiles.SpringConfig))]
     public class SpringConfig : IApplicationContextAware
     {

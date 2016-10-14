@@ -1,8 +1,10 @@
 ﻿using Common.Logging;
+using Infrastructure.Csv;
 using Microsoft.Azure;
 using Spring.Context;
 using Spring.Context.Attributes;
 using Interfaces;
+using Interfaces.Infrastructure;
 using Interfaces.Shared;
 using Spring.Aspects.Logging;
 using TinyMessenger;
@@ -37,6 +39,12 @@ namespace Infrastructure.SpringFiles
         public virtual ITinyMessengerHub TinyMessengerHub()
         {
             return new TinyMessengerHub();
+        }
+
+        [ObjectDef]
+        public virtual ICsvReader CsvReader()
+        {
+            return new CsvReader(_context.GetObject<ILog>());
         }
     }
 };
