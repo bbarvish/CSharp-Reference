@@ -25,13 +25,11 @@ The attribues in the Company shared file as follows:
 `[assembly: AssemblyTrademark("My TM goes here")]`
 
 And the Version:
-'[assembly: AssemblyVersion("1.0.0.1")]'
+`[assembly: AssemblyVersion("1.0.0.1")]`
 
-'[assembly: AssemblyFileVersion("1.0.0.1")]'
+`[assembly: AssemblyFileVersion("1.0.0.1")]`
 
 I then modify each projects' AssemblyInfo.cs file and remove these lines leaving behing information that only pertains each of the final assemblies.  Once that's done, I add the shared files into each solution by adding **existing items** at the project level.  Visual Studio does not allow you to add the files to the Properties folder directly so they are added **as a link** to the root of the project and then dragged into the Properties folder.  Check out the solution to it in action.
-
-
 
 ## Projects
 The project stucture is pretty close to the [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) but is a little ligher.
