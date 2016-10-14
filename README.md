@@ -17,8 +17,11 @@ Something I have been doing for a while is sharing the information inside the As
 The attribues in the Company shared file as follows:
 
 `[assembly: AssemblyCompany("Boris Barvish")]`
+
 `[assembly: AssemblyProduct("CSharp-Reference")]`
+
 `[assembly: AssemblyCopyright("Copyright ©  2016")]`
+
 `[assembly: AssemblyTrademark("My TM goes here")]`
 `[assembly: AssemblyCulture("")]`
 
