@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{8D991524-AD4A-4798-B2BF-69AFBA9A136F}"
 	ProjectSection(SolutionItems) = preProject
+		AssemblyInfoCompanyShared.cs = AssemblyInfoCompanyShared.cs
+		AssemblyInfoVersionShared.cs = AssemblyInfoVersionShared.cs
 		README.md = README.md
 	EndProjectSection
 EndProject
