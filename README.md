@@ -11,7 +11,7 @@ Having spent many years utilizing the Spring Framework, there is absolutely a "r
 
 #### Init and Destroy
 Since I do a lot of work with application-level and distributed systems messaging (eventing if you will), there are classes that subscribe to events.  I have found that the best place to keep the event subscriptions are in a void Init method for the handler.  This way, that event subscriptions are kept out of the constructor and the injected dependencies are always obvious and clean.  Furthermore, I hate when an object fails at construction time, so I'd rather have it fail at Init time.  The stack trace is much easier to see and is much more obvious.  Likewise, the Destroy method provides a good place to drop subscriptions and perform other cleanup way before the instnace is garbage collected.  Other containers, such as AutoFac, also support this type of functionality call it IStartable and the OnRelease event.
-### Assembly Info Files
+### Assembly Info Data
 Something I have been doing for a while is sharing the information inside the AssemblyInfo.cs file across all the projects in the solution.  I break up the default AssemblyInfo.cs file from the projects into Company and Version info as those appear to be the logical parts.  These files will then become AssemblyInfoVersionShared.cs and AssemblyInfoCompanyShared.cs and are placed in the root of the solution on the file system.
 
 The attribues in the Company shared file as follows:
@@ -23,7 +23,14 @@ The attribues in the Company shared file as follows:
 `[assembly: AssemblyCopyright("Copyright ©  2016")]`
 
 `[assembly: AssemblyTrademark("My TM goes here")]`
-`[assembly: AssemblyCulture("")]`
+
+And the Version:
+'[assembly: AssemblyVersion("1.0.0.1")]'
+
+'[assembly: AssemblyFileVersion("1.0.0.1")]'
+
+I then modify each projects' AssemblyInfo.cs file and remove these lines leaving behing information that only pertains each of the final assemblies.  Once that's done, I add the shared files into each solution by adding **existing items** at the project level.  Visual Studio does not allow you to add the files to the Properties folder directly so they are added **as a link** to the root of the project and then dragged into the Properties folder.  Check out the solution to it in action.
+
 
 
 ## Projects

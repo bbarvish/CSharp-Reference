@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfoCompanyShared.cs">
+      <Link>Properties\AssemblyInfoCompanyShared.cs</Link>
+    </Compile>
+    <Compile Include="..\AssemblyInfoVersionShared.cs">
+      <Link>Properties\AssemblyInfoVersionShared.cs</Link>
+    </Compile>
     <Compile Include="AppContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpringFiles\SpringConfig.cs" />

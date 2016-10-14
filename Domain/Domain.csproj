@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfoCompanyShared.cs">
+      <Link>Properties\AssemblyInfoCompanyShared.cs</Link>
+    </Compile>
+    <Compile Include="..\AssemblyInfoVersionShared.cs">
+      <Link>Properties\AssemblyInfoVersionShared.cs</Link>
+    </Compile>
     <Compile Include="Address.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

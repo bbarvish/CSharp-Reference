@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfoCompanyShared.cs">
+      <Link>Properties\AssemblyInfoCompanyShared.cs</Link>
+    </Compile>
+    <Compile Include="..\AssemblyInfoVersionShared.cs">
+      <Link>Properties\AssemblyInfoVersionShared.cs</Link>
+    </Compile>
     <Compile Include="Shared\IAppContext.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
